@@ -60,9 +60,9 @@ body {
 .card {
     padding: 10px;
     position: relative;
-    width: 250px;
+    width: 225px;
     height: 250px;
-    background: #313131;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,11 +72,12 @@ body {
     border-radius: 8px;
     text-decoration: none;
     margin: 1.8em;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
 }
   
   .img {
     position: absolute;
-    height: 65%;
+    width: 80%;
     transition: 0.2s ease-in-out;
     z-index: 1;
   }
@@ -94,6 +95,7 @@ body {
   
   .textBox > .text {
     font-weight: bold;
+    color: #17152e;
   }
   
   .textBox > .head {

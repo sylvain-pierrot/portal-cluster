@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: portal-cluster
-        image: sylvainpierrot/portal-cluster:latest
+        image: sylvainpierrot/portal-cluster:v2
         ports:
         - containerPort: 80
