@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portal-cluster
+  namespace: sylvain
+  labels:
+    app: portal-cluster
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: portal-cluster
+  template:
+    metadata:
+      labels:
+        app: portal-cluster
+    spec:
+      containers:
+      - name: portal-cluster
+        image: sylvainpierrot/portal-cluster:latest
+        ports:
+        - containerPort: 80

@@ -1,0 +1,140 @@
+* {
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+  background-color: #cfd9df;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-repeat: no-repeat;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 990px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+    margin-top: 20px;
+    color: #17152e;
+    font-size: 2em;
+}
+
+#robot {
+    margin-top: 20px;
+    width: fit-content;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+}
+
+.links {
+    margin-top: 2em;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+/* .container > .card {
+    width: 33,3%;
+    height: 540px;
+} */
+
+.card {
+    padding: 10px;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #313131;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 1.8em;
+}
+  
+  .img {
+    position: absolute;
+    height: 65%;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+  }
+  
+  .textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+  }
+  
+  .textBox > .text {
+    font-weight: bold;
+  }
+  
+  .textBox > .head {
+    font-size: 20px;
+  }
+  
+  .textBox > .body {
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .textBox > span {
+    font-size: 12px;
+    color: #e3e5e1;
+  }
+  
+  .card:hover > .textBox {
+    opacity: 1;
+  }
+  
+  .card:hover > .img {
+    filter: blur(7px);
+    animation: anim 3s infinite;
+  }
+  
+  @keyframes anim {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(-1deg);
+  }
+  
+  
