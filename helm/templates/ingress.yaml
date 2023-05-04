@@ -3,10 +3,11 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-  name: portal-cluster-ingress
+  name: portal-cluster
   namespace: sylvain
 spec:
   ingressClassName: nginx
+  
   rules:
   - host: cluster-2022-9.dopolytech.fr
     http:
@@ -15,16 +16,12 @@ spec:
           service:
             name: portal-cluster
             port:
-              number: 80
+              name: http
         path: /
         pathType: Prefix
+        
   tls:
   - hosts:
     - cluster-2022-9.dopolytech.fr
     secretName: cluster-2022-9.dopolytech.fr
-status:
-  loadBalancer:
-    ingress:
-    - ip: 162.38.112.155
-    - ip: 162.38.112.159
 
