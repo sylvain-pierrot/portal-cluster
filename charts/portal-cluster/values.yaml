@@ -19,7 +19,7 @@ deployments:
   image:
     repository: sylvainpierrot/portal-cluster
     pullPolicy: Always
-    tag: latest  
+    tag: "1239f9c"  
   containerPort: "80"
 
 ## Services
