@@ -34,7 +34,7 @@ jobs:
           context: frontend
           target: prod
           push: true
-          tags: sylvainpierrot/portal-cluster:${{ steps.commit.outputs.short }}
+          tags: sylvainpierrot/portal-cluster-frontend:${{ steps.commit.outputs.short }}
 
       - name: Update tag version frontend
         run: |

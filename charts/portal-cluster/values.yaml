@@ -17,7 +17,7 @@ deployments:
 - name: portal-cluster-frontend
   replicaCount: 1
   image:
-    repository: sylvainpierrot/portal-cluster
+    repository: sylvainpierrot/portal-cluster-frontend
     pullPolicy: Always
     tag: "1239f9c"  
   containerPort: "80"
