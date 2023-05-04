@@ -1,0 +1,37 @@
+namespace: sylvain
+
+## External access to the service in a cluster
+ingress:
+  name: "portal-cluster"
+  serviceNameFront: "portal-cluster-frontend"
+  # serviceNameBack: "btm-backend"
+  tls: true
+  className: "nginx"
+  host: "cluster-2022-9.dopolytech.fr"
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    
+
+## Deployments
+deployments: 
+- name: portal-cluster-frontend
+  replicaCount: 1
+  image:
+    repository: sylvainpierrot/portal-cluster
+    pullPolicy: Always
+    tag: latest  
+  containerPort: "80"
+
+## Services
+services:
+- name: portal-cluster-frontend
+
+
+## Ressources
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
